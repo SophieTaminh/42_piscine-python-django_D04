@@ -4,6 +4,7 @@ from django.shortcuts import render
 
 
 def formulaire(request):
+	form = my_form.formulaire(request.POST)
 	if (request.method == "POST"):
 		form = my_form(request.POST)
 		if form.is_valid():
@@ -12,4 +13,4 @@ def formulaire(request):
 		else:
 			form = my_form()
 		return render(request,'ex02/formulaire.html',{'form' : form})
-	
+		
