@@ -22,4 +22,6 @@ urlpatterns = [
     path('ex00/', include('ex00.urls')),
 # pour ex01
     path('ex01/', include('ex01.urls')),
+# pour ex02
+    path('ex02/', include('ex02.urls')),
 ]

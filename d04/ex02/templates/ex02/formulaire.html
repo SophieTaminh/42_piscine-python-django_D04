@@ -1,0 +1,20 @@
+{% extends 'ex01/base.html' %}
+
+
+{% block title %}
+	<div id="formulaire">
+		<h2>Formulaire</h2>
+		<form method="POST">
+			{% csrf_token%} <!-- securite -->
+			{{ form }}		<!-- formulaire genere en HTML -->
+			<input type="submit" value="submit"> <!-- bouton pour valider-->
+		</form>
+	</div>
+
+	<hr>
+
+	<div id="historique">
+		<h2>Historique</h2>
+
+	</div>
+{% endblock %}
