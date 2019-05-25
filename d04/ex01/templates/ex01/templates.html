@@ -1,0 +1,44 @@
+{% extends 'ex01/base.html' %}
+
+
+{% block title %}
+Moteur de template.”
+{% endblock %}
+
+
+{% block content %}
+	<h2> les blocs </h2>
+	<p>
+		Pour pouvoir faire des pages dynamique, on utilise le moteur de template de django.
+ 		 "cote ouvrante"  % bloc content %}  
+	     "cote ouvrante"% endblock %}"
+		les balises de template de django sont interprétées qui n'apparaissent plus dans le html.
+	</p>
+	<hr>
+	<h2> les boucle for .. in </h2>
+	<p>
+		Boucle bornée<br>
+		En général, quand on sait combien de fois doit avoir lieu la répétition, on utilise une boucle for.
+	</p>
+	<hr>
+	<h2> lles structures de controle if </h2>
+	<p>
+		Si nous voulons pouvoir écrire des applications véritablement utiles, il nous faut des techniques permettant d'aiguiller le déroulement du programme dans différentes directions, en fonction des circonstances rencontrées. Pour ce faire, nous devons disposer d'instructions capables de tester une certaine condition et de modifier le comportement du programme en conséquence.
+		,br>
+		La plus simple de ces instructions conditionnelles est l'instruction "if", qui permet de tester une condition et de n'exécuter les instructions que si cette condition est vérifiée.
+	</p>
+	<hr>
+	<h2> les variables passees dans le contexte </h2>
+	<p>
+		dans le template html, onpet implementer des variables qui seront alimenter par un dictionnaire dans la vue
+		<br>
+		Dans le template {{nom_variable}}
+		parametre dans l'appel de la fonction dans la vue sous la forme d'un dictionnaire
+		ex :
+		ef templates(request):
+	template = loader.get_template('ex01/templates.html',{'nom_variable' : 'blabla'})
+	context = {}
+	return HttpResponse(template.render(context, request))
+	</p>
+	<hr>
+{% endblock %}
